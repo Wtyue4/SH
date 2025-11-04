@@ -136,14 +136,14 @@ int main()
             const float sc = scores[id];
             const int cls = classIds[id];
 
-            // ÏÈ»­Ô­Ê¼¼ì²â¿ò
+            // ï¿½È»ï¿½Ô­Ê¼ï¿½ï¿½ï¿½ï¿½
             cv::rectangle(vis, b, cv::Scalar(0, 255, 0), 2);
             std::string label = std::format("c{} {:.2f}", cls, sc);
             int base = 0; cv::Size t = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &base);
             cv::rectangle(vis, {b.x, std::max(0, b.y - t.height - 4)}, {b.x + t.width + 4, b.y}, cv::Scalar(0, 255, 0), cv::FILLED);
             cv::putText(vis, label, {b.x + 2, std::max(0, b.y - 2)}, cv::FONT_HERSHEY_SIMPLEX, 0.5, {0,0,0}, 1);
 
-            // Ö±½Ó¡°Í·²¿¡±Àà±ð£¨ÈôÄ£ÐÍÖ±½ÓÊä³öÍ·²¿£©
+            // Ö±ï¿½Ó¡ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½
             if (modelOutputsHeads && cls == headClassId) {
                 if (sc > bestHeadScore) {
                     bestHeadScore = sc;
@@ -151,7 +151,7 @@ int main()
                 }
             }
 
-            // Í¨¹ýÈËÐÎ¿ò¶¥²¿¹À¼ÆÍ·²¿
+            // Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ò¶¥²ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½
             if (estimateHeadFromPerson) {
                 int hH = std::max(1, static_cast<int>(b.height * headTopRatio));
                 int hW = std::max(1, static_cast<int>(b.width * headWidthRatio));
