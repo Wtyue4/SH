@@ -10,7 +10,7 @@
 #include "MouseHelp.h"
 #include "Config.h"
 
-
+//ce
 int main()
 {
     const std::string modelPath = "yolo_head.onnx";

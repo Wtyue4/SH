@@ -6,141 +6,141 @@
 #define IMPORTchar extern "C" _declspec(dllimport) char* __stdcall 
 
 
-/***************** Éè±¸½Ó¿Ú ******************/
-// ´ò¿ªÉè±¸£¨¸ù¾İÉè±¸ĞòºÅ£©
+/***************** ï¿½è±¸ï¿½Ó¿ï¿½ ******************/
+// ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½Å£ï¿½
 IMPORTint opendevice(int index = 0);
-// ´ò¿ªÉè±¸£¨¸ù¾İÉè±¸ID£©
+// ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸IDï¿½ï¿½
 IMPORTint opendevicebyid(int vid, int pid);
-// ´ò¿ªÉè±¸£¨¸ù¾İÉè±¸Â·¾¶£©
+// ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸Â·ï¿½ï¿½ï¿½ï¿½
 IMPORTint opendevicebypath(const char *path);
-// ¼ì²éÉè±¸ÊÇ·ñÁ¬½Ó
+// ï¿½ï¿½ï¿½ï¿½è±¸ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint isconnected(void);
-// ¹Ø±ÕÉè±¸
+// ï¿½Ø±ï¿½ï¿½è±¸
 IMPORTint closedevice(void);
-// ¸´Î»Éè±¸
+// ï¿½ï¿½Î»ï¿½è±¸
 IMPORTint resetdevice(void);
-// »ñÈ¡Éè±¸ĞÍºÅ
+// ï¿½ï¿½È¡ï¿½è±¸ï¿½Íºï¿½
 IMPORTchar getmodel(void);
-// »ñÈ¡Éè±¸ĞòÁĞºÅ
+// ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½ï¿½Ğºï¿½
 IMPORTchar getserialnumber(void);
-// »ñÈ¡Éè±¸Éú²úÈÕÆÚ
+// ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTchar getproductiondate(void);
-// »ñÈ¡Éè±¸¹Ì¼ş°æ±¾ºÅ
+// ï¿½ï¿½È¡ï¿½è±¸ï¿½Ì¼ï¿½ï¿½æ±¾ï¿½ï¿½
 IMPORTchar getfirmwareversion(void);
 
 
-/***************** ¼üÅÌ½Ó¿Ú ******************/
-// °´ÏÂ¼ü
+/***************** ï¿½ï¿½ï¿½Ì½Ó¿ï¿½ ******************/
+// ï¿½ï¿½ï¿½Â¼ï¿½
 IMPORTint presskeybyname(const char *key);
 IMPORTint presskeybyvalue(int key);
-// ÊÍ·Å¼ü
+// ï¿½Í·Å¼ï¿½
 IMPORTint releasekeybyname(const char *key);
 IMPORTint releasekeybyvalue(int key);
-// °´ÏÂ²¢ÊÍ·Å¼ü
+// ï¿½ï¿½ï¿½Â²ï¿½ï¿½Í·Å¼ï¿½
 IMPORTint pressandreleasekeybyname(const char *key);
 IMPORTint pressandreleasekeybyvalue(int key);
-// ÅĞ¶Ï¼üÅÌ°´¼ü×´Ì¬
+// ï¿½Ğ¶Ï¼ï¿½ï¿½Ì°ï¿½ï¿½ï¿½×´Ì¬
 IMPORTint iskeypressedbyname(const char *key);
 IMPORTint iskeypressedbyvalue(int key);
-// ÊÍ·ÅËùÓĞ¼üÅÌ°´¼ü
+// ï¿½Í·ï¿½ï¿½ï¿½ï¿½Ğ¼ï¿½ï¿½Ì°ï¿½ï¿½ï¿½
 IMPORTint releaseallkey(void);
-// ÊäÈë×Ö·û´®
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 IMPORTint inputstring(const char *str);
-// »ñÈ¡´óĞ´Ëø¶¨×´Ì¬
+// ï¿½ï¿½È¡ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½×´Ì¬
 IMPORTint getcapslock(void);
-// »ñÈ¡Êı×Ö¼üÅÌËø¶¨×´Ì¬
+// ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
 IMPORTint getnumlock(void);
-// ÉèÖÃÊÇ·ñÇø·Ö´óĞ¡Ğ´
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ¡Ğ´
 IMPORTint setcasesensitive(int cs);
-// ÉèÖÃ°´¼üÑÓÊ±
+// ï¿½ï¿½ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½Ê±
 IMPORTint setpresskeydelay(int mind, int maxd);
-// ÉèÖÃÊäÈë×Ö·û´®¼ä¸ôÊ±¼ä
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 IMPORTint setinputstringintervaltime(int mind, int maxd);
 
 
-/***************** Êó±ê½Ó¿Ú ******************/
-// °´ÏÂÊó±ê¼ü
+/***************** ï¿½ï¿½ï¿½Ó¿ï¿½ ******************/
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint pressmousebutton(int mbtn);
-// ÊÍ·ÅÊó±ê¼ü
+// ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint releasemousebutton(int mbtn);
-// °´ÏÂ²¢ÊÍ·ÅÊó±ê¼ü
+// ï¿½ï¿½ï¿½Â²ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint pressandreleasemousebutton(int mbtn);
-// ÅĞ¶ÏÊó±ê°´¼ü×´Ì¬
+// ï¿½Ğ¶ï¿½ï¿½ï¿½ê°´ï¿½ï¿½×´Ì¬
 IMPORTint ismousebuttonpressed(int mbtn);
-// ÊÍ·ÅËùÓĞÊó±ê°´¼ü
+// ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê°´ï¿½ï¿½
 IMPORTint releaseallmousebutton(void);
-// Ïà¶ÔÒÆ¶¯Êó±ê
+// ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½
 IMPORTint movemouserelative(int x, int y);
-// ÒÆ¶¯Êó±êµ½Ö¸¶¨×ø±ê
+// ï¿½Æ¶ï¿½ï¿½ï¿½êµ½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint movemouseto(int x, int y);
-// »ñÈ¡Êó±êµ±Ç°Î»ÖÃ
+// ï¿½ï¿½È¡ï¿½ï¿½êµ±Ç°Î»ï¿½ï¿½
 IMPORTint getmousex(void);
 IMPORTint getmousey(void);
-// ÒÆ¶¯Êó±ê¹öÂÖ
+// ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint movemousewheel(int z);
-// ÉèÖÃÊó±ê°´¼üÑÓÊ±
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê°´ï¿½ï¿½ï¿½ï¿½Ê±
 IMPORTint setpressmousebuttondelay(int mind, int maxd);
-// ÉèÖÃÊó±êÒÆ¶¯ÑÓÊ±
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ê±
 IMPORTint setmousemovementdelay(int mind, int maxd);
-// ÉèÖÃÊó±êÒÆ¶¯ËÙ¶È
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ù¶ï¿½
 IMPORTint setmousemovementspeed(int speedvalue);
-// ÉèÖÃÊó±êÒÆ¶¯Ä£Ê½
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½Ä£Ê½
 IMPORTint setmousemovementmode(int modevalue);
 
 
-/***************** Ë«»ú»¥Áª½Ó¿Ú ******************/
-// ÉèÖÃÊó±êµ±Ç°Î»ÖÃ£¨Õë¶Ô²»Ö§³Ö¾ø¶ÔÖµµÄÊó±ê£©
+/***************** Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ ******************/
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½êµ±Ç°Î»ï¿½Ã£ï¿½ï¿½ï¿½Ô²ï¿½Ö§ï¿½Ö¾ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ê£©
 IMPORTint setmouseposition(int x, int y);
-// ÉèÖÃÊó±ê¾ø¶ÔÎ»ÖÃ£¨Õë¶ÔÖ§³Ö¾ø¶ÔÖµµÄÊó±ê£©
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ö§ï¿½Ö¾ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ê£©
 IMPORTint setmouseabsoluteposition(int x, int y);
-// ÉèÖÃ±»¿Ø¶ËÆÁÄ»·Ö±æÂÊ
+// ï¿½ï¿½ï¿½Ã±ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ä»ï¿½Ö±ï¿½ï¿½ï¿½
 IMPORTint setclientscreenresolution(int width, int height);
-// »ñÈ¡±»¿Ø¶ËÆÁÄ»·Ö±æÂÊ
+// ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ä»ï¿½Ö±ï¿½ï¿½ï¿½
 IMPORTchar getclientscreenresolution(void);
-// Ñ¡Ôñ¿Í»§¶Ë
+// Ñ¡ï¿½ï¿½Í»ï¿½ï¿½ï¿½
 IMPORTint selectclient(int addr);
 
 
-/***************** ¼ÓÃÜ¹·½Ó¿Ú ******************/
-// ³õÊ¼»¯¼ÓÃÜ¹·
+/***************** ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½Ó¿ï¿½ ******************/
+// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½
 IMPORTint initializedongle(void);
-// ÉèÖÃ¶ÁÃÜÂë
+// ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½
 IMPORTint setreadpassword(const char* writepwd, const char* newpwd);
-// ÉèÖÃĞ´ÃÜÂë
+// ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½
 IMPORTint setwritepassword(const char* oldpwd, const char* newpwd);
-// ´ÓÉè±¸¶Á×Ö·û´®
+// ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 IMPORTchar readstring(const char* readpwd, int addr, int count);
-// ½«×Ö·û´®Ğ´ÈëÉè±¸
+// ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½è±¸
 IMPORTint writestring(const char* writepwd, const char* str, int addr);
-// ÉèÖÃÃÜÔ¿
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿
 IMPORTint setcipher(const char* writepwd, const char* cipher);
-// ¼ÓÃÜ×Ö·û´®
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 IMPORTchar encryptstring(const char* str);
-// ½âÃÜ×Ö·û´®
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 IMPORTchar decryptstring(const char* str);
 
 
-/***************** µçÔ´¿ØÖÆ½Ó¿Ú ******************/
-// °´ÏÂµçÔ´°´Å¥
+/***************** ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Æ½Ó¿ï¿½ ******************/
+// ï¿½ï¿½ï¿½Âµï¿½Ô´ï¿½ï¿½Å¥
 IMPORTint presspowerbutton(void);
-// ÊÍ·ÅµçÔ´°´Å¥
+// ï¿½Í·Åµï¿½Ô´ï¿½ï¿½Å¥
 IMPORTint releasepowerbutton(void);
-// °´ÏÂ²¢ÊÍ·ÅµçÔ´°´Å¥
+// ï¿½ï¿½ï¿½Â²ï¿½ï¿½Í·Åµï¿½Ô´ï¿½ï¿½Å¥
 IMPORTint pressandreleasepowerbutton(void);
-// »ñÈ¡µçÔ´¹¤×÷×´Ì¬
+// ï¿½ï¿½È¡ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½×´Ì¬
 IMPORTint getpowerstatus(void);
 
 
-/***************** Éè±¸¶¨Òå½Ó¿Ú ******************/
-// ĞŞ¸ÄÉè±¸ËÙ¶È
+/***************** ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ ******************/
+// ï¿½Ş¸ï¿½ï¿½è±¸ï¿½Ù¶ï¿½
 IMPORTint setspeed(int speed);
-// ĞŞ¸ÄÉè±¸ID
+// ï¿½Ş¸ï¿½ï¿½è±¸ID
 IMPORTint setdeviceid(int vid, int pid);
-// »Ö¸´Éè±¸Ä¬ÈÏID
+// ï¿½Ö¸ï¿½ï¿½è±¸Ä¬ï¿½ï¿½ID
 IMPORTint restoredeviceid(void);
-// ÉèÖÃ²úÆ·Ãû³Æ
+// ï¿½ï¿½ï¿½Ã²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 IMPORTint setproductname(const char *pn);
-// »ñÈ¡²úÆ·Ãû³Æ
+// ï¿½ï¿½È¡ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 IMPORTchar getproductionname(void);
 
 
